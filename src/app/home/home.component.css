@@ -1,0 +1,43 @@
+.jumbotron{
+    text-align: center;
+    
+}
+
+.background-info{
+    /**background-color: #19919d; **/
+    padding:10px;
+    border-radius:5px;
+}
+
+.foot{
+    margin:10px;
+    
+    border-radius:5px;
+}
+
+ul,li{
+   list-style: none;
+}
+
+.jumbotron h4{
+text-align: left;
+}
+
+a{
+    margin:5px;
+}
+
+h1{
+color:rgb(255, 255, 255);
+}
+
+h1:hover {
+    
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,75,1) 35%, rgba(0,212,255,1) 100%);
+    }
+ 
+
+    
+    .carousel-inner > .item > img {
+        margin: 0 auto;
+      }

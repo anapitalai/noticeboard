@@ -1,0 +1,15 @@
+.user-card:hover{
+    background:grey;
+    border-radius:20px;
+    
+  }
+
+
+  img{
+    width:150px;
+    height:150px;
+    cursor:pointer;
+
+  }
+
+  .btn{cursor:pointer;}

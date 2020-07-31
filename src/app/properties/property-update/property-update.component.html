@@ -1,0 +1,37 @@
+<div *ngIf='teacher'>
+  <form (ngSubmit)="updateContact()">
+      <div class="form-group">
+          <label for="">Location</label>
+          <input class="form-control" type='text' name="location" [(ngModel)]='teacher.location'>
+      </div>
+      <div class="form-group">
+        <label for="">Price</label>
+        <input class="form-control" type='text' name="price" [(ngModel)]='teacher.price'>
+    </div>
+    <div class="form-group">
+        <label for="">Status</label>
+        <input class="form-control" type='text' name="status" [(ngModel)]='teacher.status'>
+    </div>
+    <div class="form-group">
+        <label for="">Type</label>
+        <input class="form-control" type='text' name="type" [(ngModel)]='teacher.type'>
+    </div>
+      <div>
+          <label for="">description</label>
+          <input class="form-control" type='textarea' name="description" [(ngModel)]='teacher.description'>
+      </div>
+
+
+      <div class="form-group">
+          <label for="">Created At</label>
+          <input class='form-control' type='text' name="createdAt" [(ngModel)]='teacher.createdAt'>
+      </div>
+
+
+      <div *ngIf='successMessage' class="alert alert-success">{{successMessage}}</div>
+      <div *ngIf='errorMessage' class="alert alert-danger">{{errorMessage}}</div>
+
+      <button type="submit" class="btn btn-success">Update</button>
+  </form>
+
+</div>

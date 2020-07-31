@@ -1,0 +1,102 @@
+<div class="container">
+  <div class="wrapper animated bounceInLeft">
+    <div class="company-info">
+      <h3>Student Digital NoticeBoard</h3>
+      <ul>
+        <li>
+          <i>
+            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+          </i>
+          Department of Surveying & Land Studies
+          HEAD – Prof. Jacob Babarinde                               
+          Private Mail Bag
+          Tel: (675) 473 4950/473 4962                    
+          Lae, Papua New Guinea
+          Fax: (675) 475 7667                        
+          Telephone: (675) 473 4999
+          Email: jacob.babrinde@pnguot.ac.pg                
+          Facsimile: (675) 475 7667
+        </li>
+        <li>
+          <i>
+            <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+          </i>
+          473 4962
+          <li>
+            <i>
+              <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+            </i>
+
+            473 4962
+            <li>
+              <i>
+                <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+              </i>
+              473 4962
+              
+            </li>
+            <li>
+              <i>
+                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+              </i>
+              clara.nasusu@pnguot.ac.pg
+              <li>
+                <i>
+                  <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                </i>
+                mishelle.sana@pnguot.ac.pg
+              </li>
+      </ul>
+
+    </div>
+    <div class="contact notice-thumbnail">
+
+      <h3>Email Us</h3>
+      <form [formGroup]='form' (ngSubmit)='createEmail()'>
+        <p>
+          <label>Name</label>
+          <input type="text" name="name" formControlName='name' required>
+        </p>
+        <p>
+          <label>Course Code</label>
+          <input type="text" name="company"  formControlName='company'>
+        </p>
+        <p>
+          <label>Email Address</label>
+          <input type="text" name="email"  formControlName='email' required>
+        </p>
+        <p>
+          <label>Phone Number</label>
+          <input type="text" name="telephone"  formControlName='telephone'>
+        </p>
+        <p>
+          <label>Subject</label>
+          <input type="text" name="subject"  formControlName="subject" required>
+        </p>
+        <p class="full">
+          <label>Message</label>
+          <textarea name="message"  formControlName='message' required rows="5"></textarea>
+        </p>
+        <div>
+            <p *ngIf='successMessage' class=" full alert alert-success">{{successMessage}}</p>
+            <p *ngIf='errorMessage' class="full alert alert-danger">{{errorMessage}}</p>
+          </div>
+        <p class="full">
+          <button type="submit">
+            <span class="glyphicon glyphicon-send" aria-hidden="true">Send</span>
+          </button>
+        </p>
+      </form>
+
+    </div>
+
+
+
+    
+  </div>
+
+
+</div>
+
+
+

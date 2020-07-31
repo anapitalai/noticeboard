@@ -1,0 +1,55 @@
+<div *ngIf="teachers">
+    <div class="user-card text-center">
+        <div class='text-center'>
+            <h2>{{ teachers.location}} <small>{{ teachers.price }}</small></h2>
+        </div>
+        <div class='text-center'>
+            <h2>{{ teachers.status}} <small>{{ teachers.description }}</small></h2>
+        </div>
+
+
+        <div class="container">
+
+            <div class="img-parent">
+
+                <div class='container' *ngFor='let i of teachers.avatarImage'>
+                    <button type="button" (click)="show()"><img [src]='i' class='img-responsive img-circle'></button>
+
+                </div>
+            </div>
+
+            <!-- The Modal -->
+            <div class="modal" id="myModal" [style.display]="showModal ? 'block' : 'none'">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+
+                        <div class='container' *ngFor='let i of teachers.avatarImage'>
+                            <img [src]='i' class='img-responsive img-thumbnail'>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal"
+                                (click)="hide()">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="well well-lg">{{teachers.price}}</div>
+
+        <button *ngIf='auth.isLoggedIn()' [routerLink]="['/properties',teachers._id,'edit']"
+            class="btn btn-primary btn-lg">Edit</button>
+        <button *ngIf='auth.isLoggedIn()' (click)="teacherDelete()" class="btn btn-danger btn-lg">Delete</button>
+    </div>
+
+
+
+
+
+</div>

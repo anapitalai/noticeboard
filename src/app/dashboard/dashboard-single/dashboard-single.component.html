@@ -1,0 +1,13 @@
+<div  *ngIf="user">     
+  <div class="user-card text-center">
+      <div class='text-center'> <h2>{{ user.email }} <small>{{ user._id }}</small></h2>
+      <div>Is Admin:{{user.admin}}</div>
+      <div>Updated At:{{user.updatedAt}}</div>
+      <div>Created At:{{user.createdAt}}</div>
+      
+      </div>
+      
+      <button  *ngIf='!!auth.isLoggedIn()' [routerLink]="['/dashboard',user._id,'edit']" class="btn btn-primary btn-bg">Edit Profile</button>
+      <button  *ngIf='auth.isLoggedIn()' (click)="deleteUser()" class="btn btn-danger btn-bg">Delete User</button>
+  </div>  
+</div>

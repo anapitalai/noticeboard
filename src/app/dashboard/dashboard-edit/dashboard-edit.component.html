@@ -1,0 +1,27 @@
+<h1>User Data Form</h1><hr>
+<div *ngIf='user'>
+    <form (ngSubmit)="updateUser()">
+        <div class="form-group">
+            <label for="">Email</label>
+            <input class="form-control" type='email' name="email" [(ngModel)]='user.email'>
+        </div>
+        <div class="form-group">
+            <label for="">Password</label>
+            <input class="form-control" type='password' name="password" [(ngModel)]='user.password'>
+        </div>
+
+        <div class="form-group">
+            <label for="">Admin</label>
+            <input class="form-control" type='boolean' name="admin" [(ngModel)]='user.admin'>
+        </div>
+
+
+
+
+        <div *ngIf='successMessage' class="alert alert-success">{{successMessage}}</div>
+        <div *ngIf='errorMessage' class="alert alert-danger">{{errorMessage}}</div>
+
+        <button type="submit" class="btn btn-success">Update</button>        
+    </form>
+
+</div>       

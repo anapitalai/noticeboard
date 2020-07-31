@@ -1,0 +1,22 @@
+a{cursor:pointer;}
+
+.profile{width:64px;
+ 
+}
+
+img{
+    max-width:64px;
+}
+
+
+.notice-thumbnail {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,75,1) 35%, rgba(0,212,255,1) 100%);
+    transition:all 5s ease-in-out;
+    }
+    
+    .notice-thumbnail:hover{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,97,1) 35%, rgba(0,212,255,1) 100%);
+      
+    }

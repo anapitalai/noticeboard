@@ -14,7 +14,6 @@ export class AuthComponent implements OnInit {
 
   ngOnInit() {}
 
- 
 
   login(){
     this.errorMessage='';

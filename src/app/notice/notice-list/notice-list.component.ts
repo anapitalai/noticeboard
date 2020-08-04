@@ -44,7 +44,7 @@ export class NoticeListComponent implements OnInit {
       if(c1.title>c2.title) return 1
       else if (c1.title===c2.title) return 0
       else return -1
-      //return b.createdAt.valueOf() - a.createdAt.valueOf();
+      
     })
   }
 

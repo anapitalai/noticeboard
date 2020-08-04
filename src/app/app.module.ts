@@ -48,6 +48,8 @@ import { LectureListComponent } from './lecture/lecture-list/lecture-list.compon
 
 import { DashjsPlayerComponent } from './dashjs-player/dashjs-player.component';
 import { SortByCreateDatePipe } from './pipes/sort-by-create-date.pipe';
+import { DownloadsComponent } from './downloads/downloads.component';
+import { DownloadsListComponent } from './downloads/downloads-list/downloads-list.component';
 export function authHttpFactory(http:Http,options:RequestOptions){
   return new AuthHttp(new AuthConfig({
     tokenGetter:(()=>localStorage.getItem('access_token')),
@@ -89,6 +91,8 @@ export function authHttpFactory(http:Http,options:RequestOptions){
     LectureListComponent,
     DashjsPlayerComponent,
     SortByCreateDatePipe,
+    DownloadsComponent,
+    DownloadsListComponent,
   ],
   imports: [
     BrowserModule,

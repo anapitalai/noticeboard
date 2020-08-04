@@ -33,6 +33,8 @@ import { NoticeUpdateComponent } from './notice/notice-update/notice-update.comp
 import { LectureComponent } from './lecture/lecture.component';
 import { LectureListComponent } from './lecture/lecture-list/lecture-list.component';
 import { AuthGuard } from './shared/guards/guards.service';
+import { DownloadsComponent } from './downloads/downloads.component';
+import { DownloadsListComponent } from './downloads/downloads-list/downloads-list.component';
 
 
 const routes: Routes = [
@@ -147,27 +149,22 @@ const routes: Routes = [
         component:LectureListComponent
     },
 
-    /** 
-     
-    {
-        path:'create',
-       component:EmailCreateComponent,
-        //canActivate:[AuthGuard],
+    ]   
+},
+{
+    path:'downloads',
+   // canActivate:[AuthGuard],
+    component:DownloadsComponent,
+    //canActivateChild:[AuthGuard],
+    children:[{
+        path:'',
+        component:DownloadsListComponent
     },
-    {
-        path:':id',
-        component:PropertySingleComponent
-    }
-    ,
-    {
-        path:':id/edit',
-        component:PropertyUpdateComponent
-    }**/
+
+
 
     ]   
-}
-
-,
+},
 
 {
     path:'dashboard',
